@@ -19,7 +19,7 @@ public class Challenge1Main {
 			String age_in_hexadecimal = HexCalculator.hexCalculator(age);
 			String age_in_binary = BinaryCalculator.binaryCalculator(age);			
 
-			Printer printer = new Printer();
+			Printer printer = new Printer(); // obj demo (not necessary for accessing static methods)
 
 			printer.print(name, surname, dob, distance, age, distance_in_miles, distance_in_meters, age_in_seconds, age_in_milliseconds, age_in_hexadecimal, age_in_binary);
 		} else {
@@ -30,7 +30,7 @@ public class Challenge1Main {
 			} else if (isNumber != true) {
 				System.out.println("\nInvalid distance. Exiting...");
 			} else {
-				System.out.println("\nInvalid input");
+				System.out.println("\nInvalid input. Exiting");
 			}
 		}
 	}
