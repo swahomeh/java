@@ -1,6 +1,8 @@
 public class Printer {
 	public static void print (String name, String surname, String dob, String distance, int age, double distance_in_miles, double distance_in_meters, double age_in_seconds, double age_in_milliseconds, String age_in_hexadecimal, String age_in_binary) {
 
+		System.out.println("\n ********************************************* \n");
+
 		System.out.println("\nYour name is " + name + " " + surname + ". Your DOB is " + dob + ", and you live " + distance + " kilometers from your favourite shop. You are " + age + " years old.\n");
 
 		System.out.println("Distance of the shop in miles is: " + distance_in_miles);

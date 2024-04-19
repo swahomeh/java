@@ -2,22 +2,43 @@ public class Challenge1Main {
 	public static void main (String[] arg) {
 		String name = Prompter.getInput("what is your name? ");
 		String surname = Prompter.getInput("What is your surname? ");
-		String dob = Prompter.getInput("What is your date of birth? ");
-		String distance = Prompter.getInput("How far is your house from your favourite store? ");
 
-		Boolean isDOBvalid = DateValidator.dobValidator(dob);
-		Boolean isNumber = NumberValidator.numberValidator(distance);
+		String dob = new String();
+		String distance = new String("");
+		Boolean isDOBvalid = false;
+		Boolean isNumber = false;
 
-		// System.out.println("Age? " + age);
+		while (true) {
+			dob = Prompter.getInput("What is your date of birth? ");
+			isDOBvalid = DateValidator.dobValidator(dob);
+
+			if (!isDOBvalid) {
+				System.out.println("\n[*] Invalid DOB!\n");
+			} else {
+				break;
+			}
+		}
+
+		while (true) {
+			distance = Prompter.getInput("How far is your house from your favourite store? ");
+			isNumber = NumberValidator.numberValidator(distance);
+
+			if (!isNumber) {
+				System.out.println("\n[*] Invalid distance number!\n");
+			} else {
+				break;
+			}			
+		}
 
 		if (isDOBvalid && isNumber) {
 			int age = AgeCalculator.ageCalculator(dob);
-			double distance_in_miles = MilesCalculator.milesCalculator(distance);
-			double distance_in_meters = MetersCalculator.metersCalculator(distance);
 			double age_in_seconds = SecondsCalculator.secondsCalculator(age);
 			double age_in_milliseconds = MillisecondsCalculator.millisecondsCalculator(age);
 			String age_in_hexadecimal = HexCalculator.hexCalculator(age);
-			String age_in_binary = BinaryCalculator.binaryCalculator(age);			
+			String age_in_binary = BinaryCalculator.binaryCalculator(age);
+
+			double distance_in_miles = MilesCalculator.milesCalculator(distance);
+			double distance_in_meters = MetersCalculator.metersCalculator(distance);			
 
 			Printer printer = new Printer(); // obj demo (not necessary for accessing static methods)
 
@@ -32,6 +53,6 @@ public class Challenge1Main {
 			} else {
 				System.out.println("\nInvalid input. Exiting");
 			}
-		}
+		}	
 	}
 }
