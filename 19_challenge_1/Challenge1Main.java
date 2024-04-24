@@ -8,26 +8,50 @@ public class Challenge1Main {
 		Boolean isDOBvalid = false;
 		Boolean isNumber = false;
 
+		byte count = 0;
+		byte COUNT_LIMIT = 3;
+
 		while (true) {
 			dob = Prompter.getInput("What is your date of birth? ");
 			isDOBvalid = DateValidator.dobValidator(dob);
+			int count_num = count++;
+			int trials = COUNT_LIMIT - count_num;
 
-			if (!isDOBvalid) {
-				System.out.println("\n[*] Invalid DOB!\n");
+			if (count <= (COUNT_LIMIT + 1)) {
+				if (!isDOBvalid) {
+					System.out.println("\n [*] Invalid DOB!\n");
+					System.out.println("< " + trials + " trials remaining >\n");
+				} else {
+					count = 0;
+					break;
+				}
 			} else {
-				break;
+				System.out.println("\n [*] Sorry! Maximum trials limit reached.\n");
+				System.out.println(" Exiting...\n");
+				return;
 			}
 		}
 
 		while (true) {
 			distance = Prompter.getInput("How far is your house from your favourite store? ");
 			isNumber = NumberValidator.numberValidator(distance);
+			int count_num = count++;
+			int trials = COUNT_LIMIT - count_num;
 
-			if (!isNumber) {
-				System.out.println("\n[*] Invalid distance number!\n");
+			if (count <= (COUNT_LIMIT + 1)) {
+				if (!isNumber) {
+					System.out.println("\n [*] Invalid distance number!\n");
+					System.out.println("< " + trials + " trials remaining >\n");
+				} else {
+					count = 0;
+					break;
+				}
 			} else {
-				break;
-			}			
+				System.out.println("\n [*] Sorry! Maximum trials limit reached.\n");
+				System.out.println(" Exiting...\n");
+				return;
+			}
+			
 		}
 
 		if (isDOBvalid && isNumber) {
