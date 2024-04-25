@@ -1,7 +1,7 @@
 public class Challenge1Main {
 	public static void main (String[] arg) {
-		String name = Prompter.getInput("what is your name? ");
-		String surname = Prompter.getInput("What is your surname? ");
+		String name = Prompter.getInput("Enter your first name? ").trim();
+		String surname = Prompter.getInput("Enter your surname? ").trim();
 
 		String dob = new String();
 		String distance = new String("");
@@ -12,15 +12,15 @@ public class Challenge1Main {
 		byte COUNT_LIMIT = 3;
 
 		while (true) {
-			dob = Prompter.getInput("What is your date of birth? ");
+			dob = Prompter.getInput("What is your date of birth? (DD/MM/YYYY) ");
 			isDOBvalid = DateValidator.dobValidator(dob);
-			int count_num = count++;
-			int trials = COUNT_LIMIT - count_num;
+			int trials = COUNT_LIMIT - count;
 
-			if (count <= (COUNT_LIMIT + 1)) {
+			if (trials <= (COUNT_LIMIT)) {
 				if (!isDOBvalid) {
 					System.out.println("\n [*] Invalid DOB!\n");
 					System.out.println("< " + trials + " trials remaining >\n");
+					count++;
 				} else {
 					count = 0;
 					break;
@@ -35,13 +35,13 @@ public class Challenge1Main {
 		while (true) {
 			distance = Prompter.getInput("How far is your house from your favourite store? ");
 			isNumber = NumberValidator.numberValidator(distance);
-			int count_num = count++;
-			int trials = COUNT_LIMIT - count_num;
+			int trials = COUNT_LIMIT - count;
 
-			if (count <= (COUNT_LIMIT + 1)) {
+			if (trials <= (COUNT_LIMIT)) {
 				if (!isNumber) {
 					System.out.println("\n [*] Invalid distance number!\n");
 					System.out.println("< " + trials + " trials remaining >\n");
+					count++;
 				} else {
 					count = 0;
 					break;
