@@ -13,4 +13,8 @@ public class Printer {
 		System.out.println("\n > Your age in hexadecimals: " + age_in_hexadecimal);
 		System.out.println("\n > Your age in binary: " + age_in_binary);
 	}
+
+	public static void info (String message) {
+		System.out.println("\n" + message + "\n");
+	}
 }

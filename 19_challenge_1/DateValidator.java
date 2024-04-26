@@ -4,9 +4,9 @@ import java.time.format.DateTimeFormatter;
 public class DateValidator {
 	public static boolean dobValidator (String dob) {
 
-		final String DATE_FORMAT = "dd/MM/yyyy";
+		final String DESIRED_DATE_FORMAT = "dd/MM/yyyy";
 
-		DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern (DATE_FORMAT);
+		DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern (DESIRED_DATE_FORMAT);
 
 		try {
 			LocalDate date = LocalDate.parse(dob, dateFormat);
