@@ -1,23 +1,54 @@
-public class BreakTest {
-    public static void main(String[] args) {
-       
-        int limit = 7;
-        int i = 0;
-        // while (i < 10){
-        //     System.out.println("Counter ="+i);
-        //     if(i == limit)
-        //         break;
-        //     i++;
-        // } 
+public class BreakTest1 {
+    public static void main(String[] args) {       
+        // outer:for(int i = 0;i<3;i++){
+        //     System.out.println("outer:"+i);
+        //     inner:for(int j = 0;j<3;j++){
+        //         System.out.println(" inner:"+j);
+        //         if(i == 2){
+        //          break inner;
+        //         }
+        //         innest:for(int k = 0;k<3;k++){
+        //             System.out.println("  innest:"+k);
+        //         }               
+        //     }           
+        // }
 
-        do {
-            System.out.println("Counter ="+i);
-            if (i == limit)
-                break;
-            i++;
-        } while (
-            i < 10
-        );    
-       
+        // int i = 0;
+        // outer:while(i<3){
+        //     System.out.println("outer:"+i);
+        //     int j = 0;
+        //     inner:while(j<3){
+        //         System.out.println(" inner:"+j);
+        //         if(i == 2){
+        //             break inner;
+        //         }
+        //         int k = 0;
+        //         innest:while(k<3){
+        //             System.out.println("  innest:"+k);
+        //             k++;
+        //         } 
+        //         j++;         
+        //     } 
+        //     i++;          
+        // }  
+
+        int i = 0;
+        outer: do {
+            System.out.println("outer:"+i);
+            int j = 0;
+            inner: do {
+                System.out.println(" inner:"+j);
+                if(i == 2){
+                    break inner;
+                }
+                int k = 0;
+                innest: do {
+                    System.out.println("  innest:"+k);
+                    k++;
+                } while(k<3);
+                j++;         
+            } while(j<3);
+            i++;          
+        } while(i<3);              
     }
 }
