@@ -1,0 +1,33 @@
+import java.util.*;
+public class ArrayListTest10 {
+   public static void main(String[] args) {
+      ArrayList<String> list  = new ArrayList<>();
+      ArrayList<String> list2  = new ArrayList<>();
+
+      list.add("banana");
+      list.add("home");
+      list.add("euro");
+      list.add("world");
+      list.add("ocean");     
+
+      System.out.println(list);
+
+      System.out.println("\n");  
+
+      // Obtain an iterator for the ArrayList
+      // Iterator<String> iterator = list.iterator();
+
+      // Iterate through the elements using the iterator
+      System.out.println("Elements in the new Array:");
+      // while (iterator.hasNext()) {
+      //    String el = iterator.next();
+      //    System.out.println(el);
+      // }
+
+      String[] array = list.toArray(new String[0]);
+      // for (String i : array)
+         System.out.println(array);      
+
+   }
+
+}
