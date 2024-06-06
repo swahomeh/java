@@ -7,7 +7,7 @@ public class MockExam2 {
         int n = 0;
         System.out.println("Shoe sizes: ");
         while(n < shoesize.length){
-            System.out.print(shoesize[n] +" ");
+            System.out.print(shoesize[n]);
             n++;
             System.out.print(" ");
         }
@@ -44,7 +44,7 @@ public class MockExam2 {
         int s = 0;
         System.out.println("\n\nAdjusted shoe Sizes (size+1): ");
         while(s < shoesize.length){
-        	System.out.print((shoesize[s] + 1) + " ");
+        	System.out.print((shoesize[s] + 1));
         	s++;
         	System.out.print(" ");
         }
