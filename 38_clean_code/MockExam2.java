@@ -5,7 +5,7 @@ public class MockExam2 {
     	 int [] shoesize  =  {11,2,33,4,5,6,7,8,9,10,2,4,6,8,20,1,3,5,10,99,17,2,3,21,5,6,7,8,9,50,13,2,4,32,7,8,4,2,6,8,2,5,43,9,3,5,88,54,4,10};
 
         int n = 0;
-        System.out.println("Shoe sizes: ");
+        System.out.println("All shoe sizes collection: ");
         while(n < shoesize.length){
             System.out.print(shoesize[n]);
             n++;
@@ -13,7 +13,7 @@ public class MockExam2 {
         }
 
     	int j = 0;
-        System.out.println("\n\nPants Sizes: ");
+        System.out.println("\n\nPants Sizes collection: ");
     	while(j < shoesize.length){
 
     	 	int shirt = shoesize[j]; // Shirt size == shoe size
@@ -27,7 +27,7 @@ public class MockExam2 {
     	}	
 
         int t = 0;
-        System.out.println("\n\nSocks Sizes: ");
+        System.out.println("\n\nSocks Sizes collection: ");
  		while(t < shoesize.length){
 
  			int sock = shoesize[t]; // sock size == shoe size
@@ -42,7 +42,7 @@ public class MockExam2 {
  		}
     	 		
         int s = 0;
-        System.out.println("\n\nAdjusted shoe Sizes (size+1): ");
+        System.out.println("\n\nLarger shoe sizes collection (size+1): ");
         while(s < shoesize.length){
         	System.out.print((shoesize[s] + 1));
         	s++;
@@ -50,7 +50,7 @@ public class MockExam2 {
         }
 
 	    int k = 0;
-        System.out.println("\n\nMy shoe Sizes (size+1) % 2: ");
+        System.out.println("\n\nMy shoe sizes collection (size+1) % 2: ");
 	    while(k < shoesize.length){
 
 	   		int me = shoesize[k] + 1;
@@ -65,7 +65,7 @@ public class MockExam2 {
 	   	}
     	   	
 	   	int y = 0;
-        System.out.println("\n\nOur shoe Sizes (size+1) % 11: ");
+        System.out.println("\n\nOur shoe sizes (size+1) % 11: ");
 	   	while(y < shoesize.length){	
 
 	   		int us = shoesize[y] + 1;
