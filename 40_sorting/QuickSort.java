@@ -10,8 +10,7 @@ public class QuickSort {
 
 	public static void main(String[] args) {
 
-		// QuickSort theSort = new QuickSort(10);
-		int[] theSort = QuickSort(10);
+		QuickSort theSort = new QuickSort(10);
 
 		theSort.generateRandomArray();
 
