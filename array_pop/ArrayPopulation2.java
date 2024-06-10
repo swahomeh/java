@@ -20,7 +20,7 @@ public class ArrayPopulation2 {
         booleanArray[booleanArray.length-1] = true;
         stringArray[stringArray.length-1] = "Hello World!";
 
-        printArray("Byte array: ",byteArray); // (Object) byteArray - type casting
+        printArray("Byte array: ",byteArray); // (Object) byteArray - type casting here
         printArray("Short array: ",shortArray);
         printArray("Int array: ",intArray);
         printArray("Long array: ",longArray);
