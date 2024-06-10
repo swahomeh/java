@@ -84,6 +84,7 @@ public class ArrayPopulation4 {
 
         System.out.print("]\n");
     }
+    
     public static void printArray(String prefix, long[] arrayToPrint){
         System.out.print(prefix);
         System.out.print("[");
