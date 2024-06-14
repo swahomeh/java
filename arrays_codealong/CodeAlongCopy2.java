@@ -10,7 +10,6 @@ public class CodeAlongCopy2 {
 
 		// print menu
 		int userMenuInput = printMenu();
-		System.out.println(userMenuInput);
 
 		if (userMenuInput > 0 && userMenuInput <= 3)
 			switch (userMenuInput) {
@@ -40,7 +39,7 @@ public class CodeAlongCopy2 {
 						System.out.println("\nCell: " + cell);
 					else
 						System.out.println("Invalid cell");
-															
+
 					break;
 			}	
 	}
@@ -165,7 +164,7 @@ public class CodeAlongCopy2 {
 		int[] cellNum = new int[array.length];
 
 		while (true) {
-			System.out.println("Please enter the row number:");
+			System.out.println("Please enter the cell row number:");
 
 			rowIndex = scanner.nextInt();
 
@@ -174,7 +173,7 @@ public class CodeAlongCopy2 {
 		}
 
 		while (true) {
-			System.out.println("Please enter the column number:");
+			System.out.println("Please enter the cell column number:");
 
 			columnIndex = scanner.nextInt();
 
