@@ -7,6 +7,21 @@ public class SortingDeep {
 
 		// System.out.print(array.length);
 
+		printer(array);
+
+		for (int i = 0; i < array.length; i++) {
+			if (i == 19)
+				array[i] += 20;
+
+			if (i == 60)
+				array[i] += 61;
+		}
+
+		System.out.println("\n");
+		printer(array);
+	}
+
+	public static void printer(int[] array) {
 		int count = 0;
 		System.out.print("[");
 		for (int value : array) {
@@ -18,6 +33,6 @@ public class SortingDeep {
 			count++;
 
 		}
-		System.out.print("]");
+		System.out.print("]");		
 	}
 }
