@@ -39,7 +39,7 @@ public class SortingDeep {
 		int i = low - 1;
 
 		for (int j = low; j < high; j++) 
-			if (array[j] <= pivot) {
+			if (array[j] >= pivot) {
 				i++;
 				swap(array, i, j);
 			}
