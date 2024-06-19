@@ -206,11 +206,12 @@ public class QuickSort {
         printArray(array);
     }
     
+ 
     public static void quickSort(int[] array, int low, int high) {
         if (low < high) {
             int pivotIndex = partition(array, low, high);
-            quickSort(array, low, pivotIndex - 1);
-            quickSort(array, pivotIndex + 1, high);
+            quickSort(array, low, pivotIndex - 1);   // recursion
+            quickSort(array, pivotIndex + 1, high);   // recursion
         }
     }
     
